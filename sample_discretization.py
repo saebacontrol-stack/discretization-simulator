@@ -28,11 +28,11 @@ def sys_calc(x, u):
     B = np.array([omega])
     return A @ x + B @ u
 
-def solve_rk4(sys_func, x, u, dt):
+def solve_rk4(sys_calc, x, u, dt):
     """4次ルンゲ・クッタ法による1ステップ数値積分
     引数:
     -----------
-    sys_func : 状態方程式 dx/dt = A@x + B@u 計算用関数
+    sys_calc : 状態方程式 dx/dt = A@x + B@u 計算用関数
     x : 現在の状態変数
     u : 現在の入力
     dt : 積分時間刻み幅[s]
